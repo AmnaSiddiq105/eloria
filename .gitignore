@@ -1,0 +1,26 @@
+# Composer dependencies
+/vendor/
+
+# Environment / secret files
+.env
+
+# ÉLORIA email credentials
+/includes/email_config.php
+
+# Local XAMPP files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+/vendor/
+.env
+/includes/email_config.php
+
+*.log
+*.tmp
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,615 @@
+
+/* =========================================================
+   ÉLORIA ADMIN SIDEBAR
+   Shared sidebar for all admin pages
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 270px;
+    height: calc(100vh - 40px);
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.86);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(230, 207, 223, 0.55);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(90, 65, 90, 0.08),
+        0 5px 15px rgba(90, 65, 90, 0.04);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand {
+    margin-bottom: 28px;
+}
+
+.brand-logo {
+    display: block;
+
+    color: #3d3540;
+
+    text-decoration: none;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+
+    transition: all 0.25s ease;
+}
+
+.brand-logo:hover {
+    color: #9b6d84;
+
+    transform: translateX(2px);
+}
+
+.brand-subtitle {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #a08091;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ADMIN PROFILE
+========================================================= */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(249, 230, 239, 0.78),
+            rgba(235, 229, 247, 0.72)
+        );
+
+    border: 1px solid rgba(230, 210, 225, 0.35);
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* Avatar */
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9bfd3,
+            #cfc5e8
+        );
+
+    color: #ffffff;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(180, 145, 175, 0.15);
+}
+
+
+/* Admin information */
+
+.admin-info {
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.admin-info strong {
+    display: block;
+
+    color: #403741;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.admin-info span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a18898;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.sidebar-nav {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+/* Navigation links */
+
+.nav-link {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    color: #756773;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.nav-link:hover {
+    color: #4e414b;
+
+    background: rgba(246, 225, 235, 0.58);
+
+    transform: translateX(3px);
+}
+
+
+/* Active */
+
+.nav-link.active {
+    color: #594653;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 213, 227, 0.92),
+            rgba(226, 219, 242, 0.88)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(190, 160, 185, 0.12);
+}
+
+
+/* =========================================================
+   NAV ICON
+========================================================= */
+
+.nav-icon {
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    color: #806b78;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* Active icon */
+
+.nav-link.active .nav-icon {
+    background: rgba(255, 255, 255, 0.85);
+
+    color: #76556a;
+}
+
+
+/* Hover icon */
+
+.nav-link:hover .nav-icon {
+    background: rgba(255, 255, 255, 0.88);
+
+    color: #76556a;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   Profile + Logout
+========================================================= */
+
+.sidebar-bottom {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    border-top: 1px solid rgba(220, 200, 215, 0.45);
+}
+
+
+/* =========================================================
+   BOTTOM LINKS
+========================================================= */
+
+.bottom-link {
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 15px;
+
+    color: #756773;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Bottom hover */
+
+.bottom-link:hover {
+    color: #4e414b;
+
+    background: rgba(246, 225, 235, 0.65);
+
+    transform: translateX(3px);
+}
+
+
+/* Active Profile */
+
+.bottom-link.active {
+    color: #594653;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 213, 227, 0.88),
+            rgba(226, 219, 242, 0.82)
+        );
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-link {
+    color: #9b6578;
+}
+
+.logout-link .nav-icon {
+    color: #a96f84;
+    background: rgba(250, 232, 239, 0.8);
+}
+
+.logout-link:hover {
+    color: #8b4f65;
+
+    background: rgba(249, 220, 230, 0.78);
+
+    transform: translateX(3px);
+}
+
+.logout-link:hover .nav-icon {
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #8b4f65;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLL SAFETY
+========================================================= */
+
+.sidebar-nav {
+    min-height: 0;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(203, 175, 195, 0.45)
+        transparent;
+}
+
+
+/* Chrome scrollbar */
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(203, 175, 195, 0.45);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT SUPPORT
+   Use this class on page content if needed
+========================================================= */
+
+.admin-main {
+    margin-left: 310px;
+
+    width: calc(100% - 330px);
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 245px;
+    }
+
+    .admin-main {
+        margin-left: 275px;
+
+        width: calc(100% - 295px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: calc(100% - 30px);
+
+        height: auto;
+
+        min-height: auto;
+
+        margin: 15px;
+
+        padding: 24px 18px;
+
+        border-radius: 24px;
+
+        overflow: visible;
+    }
+
+
+    .sidebar-brand {
+        margin-bottom: 22px;
+    }
+
+
+    .admin-profile {
+        margin-bottom: 20px;
+    }
+
+
+    .sidebar-nav {
+        overflow: visible;
+    }
+
+
+    .sidebar-bottom {
+        margin-top: 20px;
+    }
+
+
+    .admin-main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 0 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        width: calc(100% - 20px);
+
+        margin: 10px;
+
+        padding: 22px 15px;
+
+        border-radius: 22px;
+    }
+
+
+    .brand-logo {
+        font-size: 30px;
+    }
+
+
+    .admin-profile {
+        padding: 12px;
+    }
+
+
+    .nav-link,
+    .bottom-link {
+        padding: 11px 13px;
+    }
+
+
+    .nav-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+

@@ -1,0 +1,921 @@
+/* =========================================================
+   ÉLORIA AUTH PAGE
+   Soft Luxury Theme
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #3d3040;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(244, 211, 225, 0.85), transparent 32%),
+        radial-gradient(circle at 90% 85%, rgba(217, 202, 232, 0.75), transparent 35%),
+        linear-gradient(135deg, #fff9fb 0%, #f8eef5 45%, #eee6f4 100%);
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+   ========================================================= */
+
+.auth-decoration {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.decoration-one {
+    width: 430px;
+    height: 430px;
+    top: -180px;
+    left: -150px;
+    background: rgba(231, 184, 205, 0.28);
+}
+
+.decoration-two {
+    width: 500px;
+    height: 500px;
+    bottom: -250px;
+    right: -180px;
+    background: rgba(190, 170, 215, 0.25);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 670px;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    position: relative;
+    z-index: 2;
+
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(93, 67, 94, 0.16),
+        0 8px 25px rgba(93, 67, 94, 0.08);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SHOWCASE
+   ========================================================= */
+
+.auth-showcase {
+    position: relative;
+    padding: 55px 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(236, 204, 219, 0.95),
+            rgba(221, 208, 232, 0.92)
+        );
+
+    overflow: hidden;
+}
+
+
+/* decorative shine */
+
+.auth-showcase::before {
+    content: "";
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    top: -150px;
+    right: -100px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.auth-showcase::after {
+    content: "";
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    bottom: -130px;
+    left: -100px;
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-symbol {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(76, 52, 75, 0.25);
+    border-radius: 50%;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #4c354b;
+}
+
+.brand h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #493448;
+}
+
+.brand p {
+    margin-top: 1px;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #735d70;
+}
+
+
+/* =========================================================
+   SHOWCASE CONTENT
+   ========================================================= */
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    max-width: 390px;
+}
+
+.small-heading {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #72586e;
+}
+
+.showcase-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 5vw, 68px);
+    line-height: 0.91;
+    font-weight: 500;
+    color: #443143;
+}
+
+.showcase-content h2 em {
+    color: #956b88;
+    font-weight: 500;
+}
+
+.showcase-content p {
+    margin-top: 28px;
+    max-width: 340px;
+
+    font-size: 12px;
+    line-height: 1.9;
+    font-weight: 400;
+
+    color: #675467;
+}
+
+
+/* =========================================================
+   SHOWCASE FOOTER
+   ========================================================= */
+
+.showcase-footer {
+    position: relative;
+    z-index: 2;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #6e586a;
+}
+
+
+/* =========================================================
+   RIGHT LOGIN CARD
+   ========================================================= */
+
+.auth-card {
+    padding: 65px 75px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(255, 251, 253, 0.88);
+}
+
+
+/* =========================================================
+   MOBILE LOGO
+   ========================================================= */
+
+.mobile-logo {
+    display: none;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    color: #4c354b;
+
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.form-label {
+    display: block;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #9b6f89;
+
+    margin-bottom: 13px;
+}
+
+.auth-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 46px;
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #443143;
+}
+
+.form-intro {
+    margin-top: 13px;
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #806c7d;
+}
+
+
+/* =========================================================
+   ERROR BOX
+   ========================================================= */
+
+.error-box {
+    margin-bottom: 25px;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(174, 93, 119, 0.08);
+    border: 1px solid rgba(174, 93, 119, 0.18);
+
+    color: #8e526b;
+}
+
+.error-box p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group {
+    margin-bottom: 21px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    color: #655264;
+}
+
+.input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    height: 54px;
+
+    border: 1px solid #dfd2dc;
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.input-wrapper:hover {
+    border-color: #c9afc1;
+}
+
+.input-wrapper:focus-within {
+    border-color: #a87d99;
+
+    box-shadow:
+        0 0 0 4px rgba(168, 125, 153, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.input-wrapper > span {
+    width: 48px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    color: #a47b96;
+}
+
+.input-wrapper input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 14px 0 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+
+    color: #443143;
+}
+
+.input-wrapper input::placeholder {
+    color: #b4a5b1;
+}
+
+.password-toggle {
+    margin-right: 14px;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #9b718a;
+
+    transition: color 0.25s ease;
+}
+
+.password-toggle:hover {
+    color: #63475e;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+   ========================================================= */
+
+.auth-button {
+    width: 100%;
+    height: 56px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            110deg,
+            #65485f,
+            #8d687f,
+            #a77d96
+        );
+
+    box-shadow:
+        0 12px 25px rgba(101, 72, 95, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.auth-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 17px 30px rgba(101, 72, 95, 0.25);
+
+    filter: brightness(1.04);
+}
+
+.auth-button:active {
+    transform: translateY(-1px);
+}
+
+.auth-button span:last-child {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin: 27px 0 20px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+    flex: 1;
+
+    background: #e4d9e1;
+}
+
+.divider span {
+    white-space: nowrap;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #a08e9d;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT BUTTON
+   ========================================================= */
+
+.secondary-button {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #cdbac8;
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    color: #65485f;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: #65485f;
+    color: #fff;
+    border-color: #65485f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TERMS
+   ========================================================= */
+
+.terms {
+    margin-top: 23px;
+
+    text-align: center;
+
+    font-size: 9px;
+    line-height: 1.7;
+
+    color: #aa9aa7;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .auth-container {
+        max-width: 720px;
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .auth-showcase {
+        display: none;
+    }
+
+    .auth-card {
+        padding: 55px 65px;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .auth-card h2 {
+        font-size: 44px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .auth-page {
+        padding: 20px 14px;
+    }
+
+    .auth-container {
+        border-radius: 23px;
+    }
+
+    .auth-card {
+        padding: 40px 25px;
+    }
+
+    .mobile-logo {
+        font-size: 29px;
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .auth-card h2 {
+        font-size: 38px;
+    }
+
+    .form-intro {
+        font-size: 11px;
+        margin-bottom: 28px;
+    }
+
+    .input-wrapper {
+        height: 52px;
+    }
+
+    .auth-button {
+        height: 54px;
+    }
+
+    .secondary-button {
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .auth-card {
+        padding: 35px 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 34px;
+    }
+
+    .mobile-logo {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   SIGNUP PAGE - EXTRA FORM SPACING
+   ========================================================= */
+
+#signupForm .input-group {
+    margin-bottom: 16px;
+}
+
+#signupForm .auth-button {
+    margin-top: 10px;
+}
+
+#signupForm + .divider {
+    margin-top: 24px;
+}
+
+
+/* Better spacing on signup desktop */
+@media (min-width: 901px) {
+
+    #signupForm {
+        max-width: 100%;
+    }
+
+    #signupForm .input-wrapper {
+        height: 51px;
+    }
+
+    #signupForm .input-group label {
+        margin-bottom: 6px;
+    }
+
+    .auth-card:has(#signupForm) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .auth-card:has(#signupForm) h2 {
+        font-size: 43px;
+    }
+
+    .auth-card:has(#signupForm) .form-intro {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    #signupForm .input-group {
+        margin-bottom: 18px;
+    }
+
+    #signupForm .input-wrapper {
+        height: 52px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #signupForm .input-group {
+        margin-bottom: 16px;
+    }
+
+    #signupForm .input-wrapper {
+        height: 51px;
+    }
+
+    .auth-card:has(#signupForm) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+/* =====================================================
+   ACCOUNT TYPE CHOICE
+===================================================== */
+
+.account-choice {
+    margin: 24px 0 22px;
+}
+
+.choice-title {
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #806b73;
+}
+
+.choice-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.choice-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 12px;
+    border: 1px solid rgba(91, 65, 75, 0.15);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(91, 65, 75, 0.35);
+    box-shadow: 0 8px 20px rgba(91, 65, 75, 0.08);
+}
+
+.choice-card.active {
+    background: linear-gradient(
+        135deg,
+        #f7e9ed,
+        #eee0e8
+    );
+    border-color: #b995a2;
+    box-shadow: 0 8px 20px rgba(91, 65, 75, 0.08);
+}
+
+.choice-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #5b414b;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.choice-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.choice-text strong {
+    color: #49343c;
+    font-size: 14px;
+}
+
+.choice-text span {
+    color: #806b73;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   ADMIN NOTE
+===================================================== */
+
+.admin-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 20px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    background: rgba(248, 241, 243, 0.8);
+    color: #806b73;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.admin-note span:first-child {
+    color: #8d6875;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .choice-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}

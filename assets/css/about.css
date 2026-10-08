@@ -1,0 +1,537 @@
+
+/* =====================================================
+   ÉLORIA — OUR STORY
+   PAGE-SPECIFIC CSS ONLY
+   ===================================================== */
+
+
+/* =====================================================
+   ABOUT HERO
+   ===================================================== */
+
+.about-hero {
+    position: relative;
+    min-height: 78vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(38, 25, 32, 0.82),
+            rgba(38, 25, 32, 0.25)
+        ),
+        url("../images/about-hero.jpg") center / cover no-repeat;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(25, 15, 20, 0.45),
+        transparent
+    );
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 750px;
+
+    padding: 120px 8%;
+
+    color: #ffffff;
+}
+
+.about-hero-content span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.about-hero-content h1 {
+    margin: 22px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.about-hero-content h1 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.about-hero-content p {
+    max-width: 500px;
+
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 0.7fr 1.5fr;
+    gap: 100px;
+
+    padding: 130px 8%;
+
+    background: #fbf7f8;
+}
+
+.about-intro-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    color: #76515f;
+}
+
+.about-intro-content {
+    max-width: 750px;
+}
+
+.about-intro-content h2 {
+    margin: 0 0 35px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: 1;
+    font-weight: 500;
+
+    color: #2c2025;
+}
+
+.about-intro-content h2 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.about-intro-content p {
+    max-width: 680px;
+
+    margin: 0 0 22px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+
+    color: #66585e;
+}
+
+
+/* =====================================================
+   VALUES
+   ===================================================== */
+
+.about-values {
+    padding: 120px 8%;
+
+    background: #ffffff;
+}
+
+.about-section-heading {
+    margin-bottom: 70px;
+
+    text-align: center;
+}
+
+.about-section-heading span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 600;
+
+    color: #876271;
+}
+
+.about-section-heading h2 {
+    margin: 18px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5vw, 70px);
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #2c2025;
+}
+
+.about-section-heading h2 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.values-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    position: relative;
+
+    padding: 50px 38px;
+
+    text-align: center;
+
+    background: #faf5f7;
+
+    border: 1px solid #eee1e6;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(67, 35, 48, 0.09);
+}
+
+.value-number {
+    position: absolute;
+    top: 22px;
+    left: 25px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #aa8795;
+}
+
+.value-icon {
+    margin-bottom: 22px;
+
+    font-size: 30px;
+
+    color: #876271;
+}
+
+.value-card h3 {
+    margin: 0 0 15px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    color: #32242a;
+}
+
+.value-card p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: #76666d;
+}
+
+
+/* =====================================================
+   BRAND STORY
+   ===================================================== */
+
+.brand-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+}
+
+.brand-story-image {
+    min-height: 600px;
+
+    background:
+        url("../images/about-story.jpg")
+        center / cover no-repeat;
+}
+
+.brand-story-content {
+    padding: 100px 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #f5edf0;
+}
+
+.brand-story-content > span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    color: #876271;
+}
+
+.brand-story-content h2 {
+    margin: 20px 0 30px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 5vw, 70px);
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #32242a;
+}
+
+.brand-story-content h2 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.brand-story-content p {
+    max-width: 520px;
+
+    margin: 0 0 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: #66585e;
+}
+
+
+/* =====================================================
+   QUOTE
+   ===================================================== */
+
+.about-quote {
+    padding: 130px 10%;
+
+    text-align: center;
+
+    background: #2f2228;
+}
+
+.quote-symbol {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 80px;
+    line-height: 0.5;
+
+    color: #d7b9c5;
+}
+
+.about-quote blockquote {
+    max-width: 900px;
+
+    margin: 35px auto 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.05;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+.about-quote > span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #d7b9c5;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+   ===================================================== */
+
+.about-experience {
+    padding: 130px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(250, 244, 247, 0.94),
+            rgba(250, 244, 247, 0.94)
+        ),
+        url("../images/about-experience.jpg")
+        center / cover no-repeat;
+}
+
+.experience-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.experience-content > span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 600;
+
+    color: #876271;
+}
+
+.experience-content h2 {
+    margin: 20px 0 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 0.95;
+    font-weight: 500;
+
+    color: #302229;
+}
+
+.experience-content h2 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.experience-content p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: #6d5d64;
+}
+
+.about-shop-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 16px 28px;
+
+    text-decoration: none;
+
+    background: #32242a;
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.about-shop-btn:hover {
+    background: #876271;
+
+    transform: translateY(-3px);
+}
+
+.about-shop-btn span {
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        padding: 90px 7%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+    .brand-story {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-story-image {
+        min-height: 450px;
+    }
+
+    .brand-story-content {
+        padding: 80px 8%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        min-height: 70vh;
+    }
+
+    .about-hero-content {
+        padding: 90px 7%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 55px;
+    }
+
+    .about-intro,
+    .about-values,
+    .about-experience {
+        padding: 80px 6%;
+    }
+
+    .about-section-heading {
+        margin-bottom: 50px;
+    }
+
+    .brand-story-image {
+        min-height: 350px;
+    }
+
+    .brand-story-content {
+        padding: 65px 7%;
+    }
+
+    .about-quote {
+        padding: 90px 7%;
+    }
+
+}
